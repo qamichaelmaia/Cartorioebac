@@ -12,7 +12,7 @@ int registro() //Função responsável por cadastrar usuários no sistema
 	char cargo[40];
 	//Final de criaçãode variáveis/string
 	
-	printf("Digite o CPF a ser cadastrado: "); //coletanto informações de usuário
+	printf("Digite o CPF a ser cadastrado: "); //coletando informações de usuário
 	scanf("%s",cpf); //%s refere-se a string
 	
 	strcpy(arquivo, cpf); //responsável por copiar os valores das string
@@ -26,7 +26,7 @@ int registro() //Função responsável por cadastrar usuários no sistema
 	fprintf(file,",");
 	fclose(file);
 	
-	printf("Digite o nome a ser cadastrado: "); //coletanto informações de usuário
+	printf("Digite o nome a ser cadastrado: "); //coletando informações de usuário
 	scanf("%s",nome);
 	
 	file = fopen(arquivo,"a");
@@ -37,7 +37,7 @@ int registro() //Função responsável por cadastrar usuários no sistema
 	fprintf(file,",");
 	fclose(file);
 	
-	printf("Digite o sobrenome a ser cadastrado: "); //coletanto informações de usuário
+	printf("Digite o sobrenome a ser cadastrado: "); //coletando informações de usuário
 	scanf("%s",sobrenome);
 	
 	file = fopen(arquivo,"a");
@@ -48,7 +48,7 @@ int registro() //Função responsável por cadastrar usuários no sistema
 	fprintf(file,",");
 	fclose(file);
 	
-	printf("Digite o cargo a ser cadastrado: "); //coletanto informações de usuário
+	printf("Digite o cargo a ser cadastrado: "); //coletando informações de usuário
 	scanf("%s",cargo);
 	
 	file = fopen(arquivo,"a");
@@ -114,8 +114,8 @@ int main()
 {
 	int opcao=0; //Definindo variáveis
 	int laco=1;
-	char nomedeusuario[]="a";
-	char senhadigitada[]="a";
+	char nomedeusuario[]="a"; //criação de variável
+	char senhadigitada[]="a"; //criação de variável
 	int comparacao;
 
 	setlocale(LC_ALL,"Portuguese"); //Definindo a linguagem
@@ -125,8 +125,8 @@ int main()
 	scanf("%s",nomedeusuario);
 	scanf("%s",senhadigitada);
 	
-	comparacao = strcmp(nomedeusuario,"aluno");
-	comparacao = strcmp(senhadigitada,"ebac");
+	comparacao = strcmp(nomedeusuario,"aluno"); //definição de variável
+	comparacao = strcmp(senhadigitada,"ebac"); //definição de variável
 	
 	if(comparacao == 0)
 
@@ -182,6 +182,6 @@ int main()
 		}//fim da seleção
     }
     
-    else
+    else //erro de login
     	printf("\n\nLogin incorreto!\n\n");
 }
